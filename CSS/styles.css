@@ -43,7 +43,6 @@ body {
     padding: 0 2em;
 }
 .wrapper__h2 {
-    font-size: 2em;
     font-weight: 900;
 }
 .nav__ul {
@@ -67,13 +66,10 @@ body {
     text-align: center;
     margin: 8em 0 20em 0;
 }
-.title__h1 {
-    font-size: 3em;
-    text-transform: uppercase;
-}
 
 
 /***** MAIN LAYOUT ******/
+
 .main--two-column {
     grid-template: auto/50% 50%;
 }
@@ -87,10 +83,7 @@ body {
     place-content: center;
     padding: 0 10em;
 }
-.main__h3 {
-    font-size: 3em;
-}
-.main__text {
+.color-grey {
     color: #85858d;
 }
 .main__button {
@@ -98,7 +91,6 @@ body {
     align-self: flex-start;
     border: none;
     background-color: transparent;
-    text-transform: uppercase;
 }
 .main__button::after {
     content: " ";
@@ -111,19 +103,52 @@ body {
     top: -22%;
     z-index: -1;
 }
-.yellow::after {
-    background-color: #fef5b7;
+
+/* 
+    Cherry and Orange Styles
+*/
+
+.main__img-and-text {
+    position: relative;
 }
-.red::after {
-    background-color: #ffd8d1;
+.main__txt-absolute {
+    width: 100%;
+    position: absolute;
+    bottom: 15%;
+}
+.main__section-title-cherry {
+    color: #215348;
+}
+.main__section-txt-cherry {
+    color:#3d796d;
+}
+.main__section-title-orange {
+    color: #164e67;
+}
+.main__section-txt-orange {
+    color:#0d5676;
 }
 
+/*
+    TESTIMONIALS
+*/
+
+.main__testimonials {
+    grid-area: 4/1/5/3;
+}
+.main__testimonials-title-lett-space {
+    letter-spacing: .3em ;
+}
+.main__gallery {
+    grid-area: 5/1/6/3;
+}
 /***** FOOTER LAYOUT ******/
 .footer {
-    grid-area: 4/1/5/2;
+    grid-area: 3/1/4/2;
+    background-color: #90d4c5;
 }
 .attribution {
-    grid-area: 5/1/6/2;
+    grid-area: 4/1/5/2;
 }
 
 
@@ -131,4 +156,38 @@ body {
 /***** UTILITIES *******/
 .grid {
     display: grid;
+}
+.flex {
+    display: flex;
+}
+.yellow::after {
+    background-color: #fef5b7;
+}
+.red::after {
+    background-color: #ffd8d1;
+}
+.txt-center {
+    text-align: center;
+}
+.flex-column {
+    flex-direction: column;
+}
+.align-start {
+    align-self: start;
+}
+.flex__img {
+    width: 100%;
+    height: auto;
+}
+.center-items {
+    place-items: center;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.font-2em {
+    font-size: 2em;
+}
+.font-3em {
+    font-size: 3em;
 }
