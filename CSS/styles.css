@@ -109,13 +109,26 @@ body {
 */
 
 .main__img-and-text {
-    position: relative;
+        display: grid;
+        grid-template: .6fr .2fr .2fr / 1fr;
 }
-.main__txt-absolute {
-    width: 100%;
-    position: absolute;
-    bottom: 15%;
+.main__img-grid-span {
+    grid-area: 1/1/4/2;
 }
+
+.main__txt-grid-bottom {
+    grid-area: 2/1/4/2;
+}
+.main__txt-padding {
+    padding: .5em 15em;
+}
+.main__section-title {
+    margin: .1em 0 .7em 0;
+}
+.main__section-txt {
+    font-size: .9em;
+}
+
 .main__section-title-cherry {
     color: #215348;
 }
