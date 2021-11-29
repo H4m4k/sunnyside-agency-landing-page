@@ -120,13 +120,14 @@ body {
     grid-area: 2/1/4/2;
 }
 .main__txt-padding {
-    padding: .5em 15em;
+    padding: .5em 18.5em;
 }
 .main__section-title {
-    margin: .1em 0 .7em 0;
+    margin: 1em 0;
 }
 .main__section-txt {
     font-size: .9em;
+    line-height: 1.6;
 }
 
 .main__section-title-cherry {
@@ -148,6 +149,7 @@ body {
 
 .main__testimonials {
     grid-area: 4/1/5/3;
+    padding: 12em 0 ;
 }
 .main__testimonials-title-lett-space {
     letter-spacing: .3em ;
