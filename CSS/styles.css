@@ -47,7 +47,7 @@ body {
 }
 .nav__ul {
     display: flex;
-    gap: 2em;
+    gap: 1.5em;
     place-items: center;
     
 }
@@ -55,13 +55,18 @@ body {
     padding: 1em 2em;
     list-style: none;
     flex: 1;
+    cursor: pointer;
 }
-.nav__li:hover {
+.nav__link {
     background: #fff;
-    border-radius: 1em;
+    border-radius: 2em;
     color: black;
     font-size: 17px;
     font-family: 'Fraunces', serif;
+}
+.nav__link:hover {
+    background: #6eceff;
+    color: #fff;
 }
 
 /***** WELCOME LAYOUT ******/
@@ -100,7 +105,6 @@ body {
     display: block;
     width: 100%;
     height: .5em;
-    /* background-color: #fef5b7; */
     border-radius: 10px;
     position: relative;
     top: -22%;
@@ -196,6 +200,18 @@ GALLERY
     grid-area: 3/1/4/2;
     background-color: #90d4c5;
 }
+.footer__logo {
+    color: #2b7365;
+    font-weight: 900;
+}
+.footer__menu {
+    list-style: none;
+    cursor: pointer;
+    place-content: center;
+    gap: 3em;
+    padding: 0;
+    color: #428979
+}
 .attribution {
     grid-area: 4/1/5/2;
 }
@@ -228,7 +244,7 @@ GALLERY
     align-self: start;
 }
 .flex__img {
-    width: 100%;
+    width: 25%;
     height: auto;
 }
 .center-items {
