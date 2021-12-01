@@ -48,15 +48,19 @@ body {
 .nav__ul {
     display: flex;
     gap: 2em;
+    place-items: center;
+    
 }
 .nav__li {
-    padding: .6em 1.5em;
+    padding: 1em 2em;
     list-style: none;
+    flex: 1;
 }
 .nav__li:hover {
     background: #fff;
     border-radius: 1em;
     color: black;
+    font-size: 17px;
     font-family: 'Fraunces', serif;
 }
 
@@ -84,10 +88,12 @@ body {
     padding: 0 10em;
 }
 .main__button {
-    margin: 2em 1em;
+    margin: 2em .5em;
     align-self: flex-start;
     border: none;
     background-color: transparent;
+    cursor: pointer;
+    font-size: medium;
 }
 .main__button::after {
     content: " ";
@@ -99,6 +105,9 @@ body {
     position: relative;
     top: -22%;
     z-index: -1;
+}
+.main__title {
+    font-weight: 900;
 }
 
 /* 
@@ -158,10 +167,22 @@ TESTIMONIALS
     margin: 0 0 3em 0;
 }
 .testimonials__container {
-    padding: 0 20em;
+    padding: 0 17em;
 }
 .testimonials__text {
     padding: 0 2em;
+    margin: 1em 0 2em;
+}
+.testimonials__person {
+    place-content: space-between;
+}
+.testimonials__person-name {
+    font-weight: 900;
+    margin: 1em 0 .5em;
+}
+.testimonials__person-occupation {
+    font-size: small;
+    margin: .2em 0 1em;
 }
 /*
 GALLERY
@@ -200,6 +221,9 @@ GALLERY
 .flex-column {
     flex-direction: column;
 }
+.flex-elastic {
+    flex: 1;
+}
 .align-start {
     align-self: start;
 }
@@ -227,4 +251,7 @@ GALLERY
 }
 .color-light-grey {
     color:#a4a4a4
+}
+.block {
+    display: block;
 }
