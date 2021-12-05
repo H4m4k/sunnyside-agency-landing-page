@@ -1,12 +1,32 @@
-html, body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
 body {
-    font-size: 18px;
-    
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-size: 18px;   
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
 }
 
 /***** FONTS ******/
@@ -40,26 +60,25 @@ body {
     display: flex;
     place-content: space-between;
     place-items: center;
-    padding: 0 2em;
+    padding: 0 2rem;
 }
 .wrapper__h2 {
     font-weight: 900;
 }
 .nav__ul {
     display: flex;
-    gap: 1.5em;
+    gap: 1.5rem;
     place-items: center;
-    
 }
 .nav__li {
-    padding: 1em 2em;
+    padding: .7rem 2rem;
     list-style: none;
     flex: 1;
     cursor: pointer;
 }
 .nav__link {
     background: #fff;
-    border-radius: 2em;
+    border-radius: 2rem;
     color: black;
     font-size: 17px;
     font-family: 'Fraunces', serif;
@@ -73,30 +92,43 @@ body {
 
 .title {
     text-align: center;
-    margin: 8em 0 20em 0;
+    min-height: 40vw;
+    grid-template: 1fr .7fr 1fr /auto;
+}
+.title__h1-place-self {
+    place-self: center;
+}
+.title__arrow {
+    margin: 0 auto;
 }
 
 
 /***** MAIN LAYOUT ******/
 
 .main--two-column {
-    grid-template: auto/50% 50%;
+    grid-template: auto / 1fr 1fr;
 }
 .main__img {
     width: 100%;
     height: 100%;
 }
 .main__square {
-    display: flex;
-    flex-flow: column nowrap;
-    place-content: center;
-    padding: 0 10em;
+    grid-template: 1fr .3fr .3fr .3fr 1fr /.5fr 1fr .6fr;;
+}
+.main__title {
+    font-weight: 900;
+    grid-area: 2/2;
+}
+.main__text {
+    padding: 2rem 0 0 0;
+    grid-area: 3/2;
 }
 .main__button {
+    grid-area: 4/2;
     margin: 2em .5em;
-    align-self: flex-start;
     border: none;
     background-color: transparent;
+    justify-self: start;
     cursor: pointer;
     font-size: medium;
 }
@@ -107,11 +139,8 @@ body {
     height: .5em;
     border-radius: 10px;
     position: relative;
-    top: -22%;
+    top: -26%;
     z-index: -1;
-}
-.main__title {
-    font-weight: 900;
 }
 
 /* 
@@ -120,17 +149,14 @@ Cherry and Orange Styles
 
 .main__img-and-text {
     display: grid;
-    grid-template: .6fr .2fr .2fr / 1fr;
+    grid-template: .6fr .2fr .2fr / .8fr 1fr .8fr;
 }
 .main__img-grid-span {
-    grid-area: 1/1/4/2;
+    grid-area: 1/1 / -1/-1;
 }
 
 .main__txt-grid-bottom {
-    grid-area: 2/1/4/2;
-}
-.main__txt-padding {
-    padding: .5em 18.5em;
+    grid-area: 2/2/4/3;
 }
 .main__section-title {
     margin: 1em 0;
@@ -158,35 +184,39 @@ TESTIMONIALS
 */
 
 .testimonials {
+    grid-template: .9fr 1fr .6fr /.2fr 1fr .2fr;
+
     grid-area: 4/1/5/3;
-    padding: 10em 0 ;
 }
 .testimonials__title {
-    letter-spacing: .3em ;
-    padding: 0 0 3em 0;
+    letter-spacing: .3rem ;
+    padding: 0 0 3rem 0;
+    align-self: end;
+    grid-area: 1/2;
+}
+.testimonials__container {
+    grid-area: 2/2;
 }
 .testimonials__avatar {
-    height: 4em;
+    height: 4rem;
     border-radius: 50%;
     margin: 0 0 3em 0;
 }
-.testimonials__container {
-    padding: 0 17em;
-}
 .testimonials__text {
-    padding: 0 2em;
-    margin: 1em 0 2em;
+    padding: 0 2rem;
+    margin: 1rem 0 2rem;
+    font-weight: bold;
 }
 .testimonials__person {
     place-content: space-between;
 }
 .testimonials__person-name {
     font-weight: 900;
-    margin: 1em 0 .5em;
+    margin: 1rem 0 .5rem;
 }
 .testimonials__person-occupation {
     font-size: small;
-    margin: .2em 0 1em;
+    margin: .2rem 0 1rem;
 }
 /*
 GALLERY
@@ -214,6 +244,14 @@ GALLERY
 }
 .attribution {
     grid-area: 4/1/5/2;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
 
 
@@ -270,4 +308,11 @@ GALLERY
 }
 .block {
     display: block;
+}
+.disable
+{
+    display: none;
+}
+.subgrid {
+    grid-template: subgrid / subgrid;
 }

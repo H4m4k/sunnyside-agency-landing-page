@@ -15,17 +15,6 @@
 
   <title>Frontend Mentor | Sunnyside agency landing page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body class="barlow grid--desktop">
@@ -43,9 +32,9 @@
       </nav>
     </div>
 
-    <div class="title fraunces">
-      <h1 class="font-3em uppercase">We are creatives</h1>
-      <img src="/images/icon-arrow-down.svg" alt="">
+    <div class="title fraunces grid">
+      <h1 class="font-3em uppercase title__h1-place-self">We are creatives</h1>
+      <img class="title__arrow" src="/images/icon-arrow-down.svg" alt="">
     </div>
 
   </header>
@@ -53,30 +42,32 @@
 
   <main class="grid main--two-column">
 
-    <section class="main__square">
+    <section class="main__square grid">
       <h3 class="fraunces font-3em main__title">Transform your brand</h3>
-      <p class="color-grey barlow">We are a full-service creative agency specializing in helping brands grow fast.
+      <p class="color-grey barlow main__text">We are a full-service creative agency specializing in helping brands grow
+        fast.
         Engage your clients through compelling visuals that do most of the marketing for you.</p>
       <button class="fraunces main__button uppercase yellow">&nbsp;Learn more&nbsp;</button>
     </section>
 
-    <div><img class="main__img" src="/images/desktop/image-transform.jpg" alt=""></div>
+    <img class="main__img" src="/images/desktop/image-transform.jpg" alt="">
 
-    <div><img class="main__img" src="/images/desktop/image-stand-out.jpg" alt=""></div>
+    <img class="main__img" src="/images/desktop/image-stand-out.jpg" alt="">
 
-    <section class="main__square">
+    <section class="main__square grid">
       <h3 class="fraunces font-3em main__title">Stand out to the right audience</h3>
-      <p class="color-grey barlow">Using a collaborative formula of designers, researchers, photographers,
+      <p class="color-grey barlow main__text">Using a collaborative formula of designers, researchers, photographers,
         videographers, and copywriters, we’ll build and extend your brand in digital places.
       </p>
       <button class="fraunces main__button uppercase red">&nbsp;Learn more&nbsp;</button>
+
     </section>
 
     <div class="main__img-and-text">
       <img class="main__img main__img-grid-span" src="/images/desktop/image-graphic-design.jpg" alt="">
-      <section class="txt-center main__txt-grid-bottom">
+      <section class="txt-center main__txt-grid-bottom grid subgrid">
         <h4 class="fraunces main__section-title-cherry font-2em main__section-title">Graphic design</h4>
-        <p class="txt-center main__section-txt-cherry main__txt-padding main__section-txt">Great design makes you
+        <p class="txt-center main__section-txt-cherry  main__section-txt">Great design makes you
           memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
         </p>
       </section>
@@ -84,9 +75,9 @@
 
     <div class="main__img-and-text">
       <img class="main__img main__img-grid-span" src="/images/desktop/image-photography.jpg" alt="">
-      <section class="txt-center main__txt-grid-bottom">
+      <section class="txt-center main__txt-grid-bottom grid subgrid">
         <h4 class="fraunces main__section-title-orange font-2em main__section-title">Photography</h4>
-        <p class="txt-center main__section-txt-orange main__txt-padding main__section-txt">Increase your credibility by
+        <p class="txt-center main__section-txt-orange  main__section-txt">Increase your credibility by
           getting the most stunning, high-quality photos that improve your business image.
         </p>
       </section>
@@ -96,11 +87,11 @@
 
 
 
-    <section class="testimonials flex flex-column center-items">
+    <section class="testimonials grid center-items">
 
       <h3 class="fraunces color-light-grey uppercase testimonials__title">Client testimonials</h3>
 
-      <div class="flex testimonials__container">
+      <div class="flex testimonials__container ">
 
         <div class="testimonials__person center-items flex flex-elastic flex-column">
           <img class="testimonials__avatar" src="/images/image-emily.jpg" alt="">
